@@ -44,7 +44,7 @@ jobs:
           script/graphql/update-files.js
       - name: Create pull request
         id: create-pull-request
-        uses: peter-evans/create-pull-request@dcd5fd746d53dd8de555c0f10bca6c35628be47a
+        uses: peter-evans/create-pull-request@18f7dc018cc2cd597073088f7c7591b9d1c02672
         env:
           # Disable pre-commit hooks; they don't play nicely here
           HUSKY: '0'
