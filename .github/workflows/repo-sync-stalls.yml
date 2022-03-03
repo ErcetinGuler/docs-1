@@ -15,7 +15,7 @@ jobs:
     steps:
       - if: github.repository == 'github/docs-internal' || github.repository == 'github/docs'
         name: Check if repo sync is stalled
-        uses: actions/github-script@441359b1a30438de65712c2fbca0abe4816fa667
+        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
         with:
           github-token: ${{ secrets.DOCUBOT_READORG_REPO_WORKFLOW_SCOPES }}
           script: |
