@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Find pull request
         if: ${{ github.repository == 'github/docs' }}
-        uses: juliangruber/find-pull-request-action@db875662766249c049b2dcd85293892d61cb0b51
+        uses: juliangruber/find-pull-request-action@04c456b69755854a3aba91d91126caa304af45f6
         id: find-pull-request
         with:
           github-token: ${{ secrets.DOCS_BOT_SPAM_VISION }}
@@ -37,7 +37,7 @@ jobs:
 
       - name: Close pull request if unwanted
         if: ${{ github.repository == 'github/docs' && steps.find-pull-request.outputs.number }}
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
         with:
           github-token: ${{ secrets.DOCS_BOT_SPAM_VISION }}
           script: |
@@ -94,11 +94,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
       # Set up npm and run npm ci to run husky to get githooks for LFS
       - name: Setup node
-        uses: actions/setup-node@9ced9a43a244f3ac94f13bfd896db8c8f30da67a
+        uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048
         with:
           node-version: 16.8.x
           cache: npm
@@ -130,7 +130,7 @@ jobs:
           github_token: ${{ secrets.OCTOMERGER_PAT_WITH_REPO_AND_WORKFLOW_SCOPE }}
 
       - name: Find pull request
-        uses: juliangruber/find-pull-request-action@db875662766249c049b2dcd85293892d61cb0b51
+        uses: juliangruber/find-pull-request-action@04c456b69755854a3aba91d91126caa304af45f6
         id: find-pull-request
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -149,7 +149,7 @@ jobs:
       # Because we get far too much spam ;_;
       - name: Lock conversations
         if: ${{ github.repository == 'github/docs' && steps.find-pull-request.outputs.number }}
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
         with:
           script: |
             try {
@@ -167,7 +167,7 @@ jobs:
       # There are cases where the branch becomes out-of-date in between the time this workflow began and when the pull request is created/updated
       - name: Update branch
         if: ${{ steps.find-pull-request.outputs.number }}
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
         with:
           github-token: ${{ secrets.OCTOMERGER_PAT_WITH_REPO_AND_WORKFLOW_SCOPE }}
           script: |
@@ -216,7 +216,7 @@ jobs:
 
       - name: Enable GitHub auto-merge
         if: ${{ steps.find-pull-request.outputs.number }}
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
         with:
           github-token: ${{ secrets.OCTOMERGER_PAT_WITH_REPO_AND_WORKFLOW_SCOPE }}
           script: |
