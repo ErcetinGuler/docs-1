@@ -161,7 +161,7 @@
     "nock": "^13.2.1",
     "nodemon": "^2.0.15",
     "npm-merge-driver-install": "^3.0.0",
-    "object-hash": "^2.2.0",
+    "object-hash": "^3.0.0",
     "postcss": "^8.4.4",
     "prettier": "^2.5.1",
     "replace": "^1.2.1",
