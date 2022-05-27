@@ -34,7 +34,7 @@ jobs:
           state: open
       - if: ${{ steps.pr.outputs.number }}
         name: Check if already labeled
-        uses: actions/github-script@9ac08808f993958e9de277fe43a64532a609130e
+        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
         id: has-label
         with:
           script: |
@@ -48,7 +48,7 @@ jobs:
             }
       - if: ${{ !steps.has-label.outputs.result }}
         name: Approve Pull Request
-        uses: juliangruber/approve-pull-request-action@bc59ae0ae4d25ee8b8f65f7bf40f9ecccb7633b4
+        uses: juliangruber/approve-pull-request-action@2e3a01bea165781841c2ebaf0a8b3202557383e2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ steps.pr.outputs.number }}
