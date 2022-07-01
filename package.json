@@ -173,7 +173,7 @@
     "supertest": "^6.2.3",
     "typescript": "^4.5.3",
     "url-template": "^3.0.0",
-    "website-scraper": "^5.0.0",
+    "website-scraper": "^5.2.0",
     "yesno": "^0.3.1"
   },
   "engines": {
