@@ -174,7 +174,7 @@
     "typescript": "^4.5.3",
     "url-template": "^3.0.0",
     "website-scraper": "^5.2.0",
-    "yesno": "^0.3.1"
+    "yesno": "^0.4.0"
   },
   "engines": {
     "node": ">= 16.0.0"
