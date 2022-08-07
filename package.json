@@ -151,7 +151,7 @@
     "jest": "^28.1.0",
     "jest-github-actions-reporter": "^1.0.3",
     "jest-slow-test-reporter": "^1.0.0",
-    "linkinator": "^3.0.3",
+    "linkinator": "^4.0.2",
     "lint-staged": "^13.0.3",
     "make-promises-safe": "^5.1.0",
     "minimatch": "^5.1.0",
