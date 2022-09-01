@@ -19,7 +19,7 @@ jobs:
       DRAFT_COLUMN_ID: 10095775
       REGULAR_COLUMN_ID: 10095779
     steps:
-      - uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
+      - uses: actions/github-script@c713e510dbd7d213d92d41b7a7805a986f4c5c66
         continue-on-error: true
         with:
           github-token: ${{ secrets.DOCUBOT_READORG_REPO_WORKFLOW_SCOPES }}
