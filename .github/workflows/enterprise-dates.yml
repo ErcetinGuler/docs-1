@@ -51,7 +51,7 @@ jobs:
 
       - name: Create pull request
         id: create-pull-request
-        uses: peter-evans/create-pull-request@18f90432bedd2afd6a825469ffd38aa24712a91d
+        uses: peter-evans/create-pull-request@b4d51739f96fca8047ad065eccef63442d8e99f7
         env:
           # Disable pre-commit hooks; they don't play nicely here
           HUSKY: '0'
