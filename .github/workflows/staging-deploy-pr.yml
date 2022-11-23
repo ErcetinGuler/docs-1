@@ -293,7 +293,7 @@ jobs:
 
       - if: ${{ github.repository == 'github/docs-internal' }}
         name: Setup node to clone early access
-        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93
+        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
         with:
           node-version: 16.8.x
           cache: npm
@@ -459,7 +459,7 @@ jobs:
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
       - name: Setup node
-        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93
+        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
         with:
           node-version: 16.8.x
           cache: npm
