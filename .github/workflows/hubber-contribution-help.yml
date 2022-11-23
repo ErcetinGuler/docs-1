@@ -20,7 +20,7 @@ jobs:
       pull-requests: write
     steps:
       - id: membership_check
-        uses: actions/github-script@7a5c598405937d486b0331594b5da2b14db670da
+        uses: actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0
         with:
           github-token: ${{ secrets.DOCUBOT_READORG_REPO_WORKFLOW_SCOPES }}
           script: |
