@@ -36,7 +36,7 @@ jobs:
           script/remove-extraneous-translation-files.js
       - name: Get script results to use in PR body
         id: results
-        uses: juliangruber/read-file-action@ebfa650188272343fef925480eb4d18c5d49b925
+        uses: juliangruber/read-file-action@02bbba9876a8f870efd4ad64e3b9088d3fb94d4b
         with:
           path: ./results.md
       - name: Remove script results file
