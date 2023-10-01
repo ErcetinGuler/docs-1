@@ -34,7 +34,7 @@
     "express-basic-auth": "^1.2.1",
     "express-rate-limit": "^6.7.0",
     "express-timeout-handler": "^2.2.2",
-    "flat": "^5.0.2",
+    "flat": "^6.0.1",
     "github-slugger": "^1.4.0",
     "got": "^12.5.3",
     "gray-matter": "^4.0.3",
